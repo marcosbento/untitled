@@ -6,9 +6,12 @@
 // See https://github.com/marcosbento/untitled
 //
 
-namespace untitled {
+namespace untitled
+{
 
-template <typename T>
-class array {};
+template<typename T>
+class array
+{
+};
 
-}
+}  // namespace untitled

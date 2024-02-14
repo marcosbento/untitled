@@ -12,10 +12,6 @@
 
 BOOST_AUTO_TEST_SUITE(t_untitled)
 
-BOOST_AUTO_TEST_CASE(can_default_create_array) {
-
-  untitled::array<int> a;
-
-}
+BOOST_AUTO_TEST_CASE(can_default_create_array) { untitled::array<int> a; }
 
 BOOST_AUTO_TEST_SUITE_END()
