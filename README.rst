@@ -1,5 +1,7 @@
 
-*(lib)Untitled* is a set of basic, and mostly naive, utilities.
+*(lib)Untitled* is a set of basic, and mostly naive, utilities:
+
+- Variant
 
 License
 =======
