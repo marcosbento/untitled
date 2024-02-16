@@ -1,65 +1,75 @@
-BasedOnStyle: Google
-AccessModifierOffset: -2
-AlignAfterOpenBracket: Align
-AlignConsecutiveAssignments: None
-AlignOperands: DontAlign
-AllowAllArgumentsOnNextLine: false
-AllowAllConstructorInitializersOnNextLine: false
-AllowAllParametersOfDeclarationOnNextLine: false
-AllowShortBlocksOnASingleLine: Always
-AllowShortCaseLabelsOnASingleLine: true
-AllowShortFunctionsOnASingleLine: All
-AllowShortIfStatementsOnASingleLine: Always
-AllowShortLambdasOnASingleLine: All
-AllowShortLoopsOnASingleLine: true
-AlwaysBreakAfterReturnType: None
-AlwaysBreakTemplateDeclarations: Yes
+
+Standard: c++20
+
+# Indent with a certain number of spaces at a time (no tabs).
+IndentWidth: 2
+
+# Keep lines under a certain number of columns long.
+ColumnLimit: 180
+
+# Always break before braces
 BreakBeforeBraces: Custom
 BraceWrapping:
-  AfterCaseLabel: false
-  AfterClass: true
-  AfterControlStatement: MultiLine
-  AfterEnum: true
+  AfterClass: false
+  AfterStruct: false
+  AfterUnion: false
+  AfterControlStatement: false
+  AfterEnum: false
   AfterFunction: false
-  AfterNamespace: true
-  AfterUnion: true
-  BeforeCatch: false
-  BeforeElse: false
+  AfterNamespace: false
+  BeforeCatch: true
+  BeforeElse: true
   IndentBraces: false
-  SplitEmptyFunction: false
+  SplitEmptyFunction: true
   SplitEmptyRecord: true
-BreakBeforeBinaryOperators: NonAssignment
-BreakBeforeTernaryOperators: true
+  SplitEmptyNamespace: true
+  AfterExternBlock: false # Keeps extern "C" blocks unindented.
+
+AlwaysBreakTemplateDeclarations: Yes
+
 BreakConstructorInitializers: BeforeColon
-BreakInheritanceList: BeforeColon
-ColumnLimit: 120
-CompactNamespaces: false
-ContinuationIndentWidth: 4
+PackConstructorInitializers: CurrentLine
+
+# Indent case labels.
 IndentCaseLabels: true
-IndentPPDirectives: None
-IndentWidth: 2
+
+# Right-align pointers and references
+PointerAlignment: Left
+
+# Align things as much as possible.
+AlignOperands: true
+AlignConsecutiveAssignments: Consecutive
+AlignEscapedNewlines: Left
+AlignTrailingComments: true
+
+BinPackArguments: false
+BinPackParameters: false
+AllowAllParametersOfDeclarationOnNextLine: false
+
+AllowShortBlocksOnASingleLine: Empty
+AllowShortFunctionsOnASingleLine: InlineOnly
+
+# Use N space negative offset for access modifiers
+AccessModifierOffset: -2
+
+AllowShortCaseLabelsOnASingleLine: false
+
+# Useful for spacing out functions in classes
 KeepEmptyLinesAtTheStartOfBlocks: true
-MaxEmptyLinesToKeep: 1
-NamespaceIndentation: None
-ObjCSpaceAfterProperty: false
-ObjCSpaceBeforeProtocolList: false
-PointerAlignment: Right
-ReflowComments: false
-SpaceAfterCStyleCast: true
-SpaceAfterLogicalNot: false
-SpaceAfterTemplateKeyword: false
-SpaceBeforeAssignmentOperators: true
-SpaceBeforeCpp11BracedList: false
-SpaceBeforeCtorInitializerColon: true
-SpaceBeforeInheritanceColon: true
-SpaceBeforeParens: ControlStatements
-SpaceBeforeRangeBasedForLoopColon: false
-SpaceInEmptyParentheses: false
-SpacesBeforeTrailingComments: 2
-SpacesInAngles: false
-SpacesInCStyleCastParentheses: false
-SpacesInContainerLiterals: false
-SpacesInParentheses: false
-SpacesInSquareBrackets: false
-TabWidth: 2
-UseTab: Never
+
+# Indent nested PP directives.
+IndentPPDirectives: BeforeHash
+
+# Preserve include blocks
+IncludeBlocks: Regroup
+IncludeCategories:
+  # By default, first include the 'main' header file related to source file
+  # Then include every 'system' headers (i.e. in <>)
+  - Regex:           '<[^Q][[:alnum:]_]+(\.h)?>'
+    Priority:        10
+  # Then include '3rd party' headers 
+  - Regex:           '<[[:alnum:]/._]+>'
+    Priority:        20
+  # And finally, include every 'project' header
+  - Regex:           '.*'
+    Priority:        30
