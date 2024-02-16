@@ -12,21 +12,19 @@ add_untitled_library(
     include
   PUBLIC_HEADERS
     include/untitled/array.hpp
+    include/untitled/variant.hpp
   SOURCES
     src/array.cpp
+    src/variant.cpp
 )
 
 add_untitled_utest(
   NAME untitled.ut
-  PUBLIC_INCLUDE_DIRS
-    include
-  PUBLIC_HEADERS
-    include/untitled/array.hpp
   SOURCES
-    test/main.cpp
     test/array.ut.cpp
+    test/variant.ut.cpp
+    test/main.cpp # test driver!...
   PRIVATE_LIBS
     untitled
     Boost::boost
 )
-
