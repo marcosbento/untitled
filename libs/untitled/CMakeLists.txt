@@ -12,6 +12,7 @@ add_untitled_library(
     include
   PUBLIC_HEADERS
     include/untitled/array.hpp
+    include/untitled/packs.hpp
     include/untitled/variant.hpp
   SOURCES
     src/array.cpp
