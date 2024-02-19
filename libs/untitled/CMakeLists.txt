@@ -12,10 +12,12 @@ add_untitled_library(
     include
   PUBLIC_HEADERS
     include/untitled/array.hpp
+    include/untitled/expected.hpp
     include/untitled/packs.hpp
     include/untitled/variant.hpp
   SOURCES
     src/array.cpp
+    src/expected.cpp
     src/variant.cpp
 )
 
@@ -23,6 +25,7 @@ add_untitled_utest(
   NAME untitled.ut
   SOURCES
     test/array.ut.cpp
+    test/expected.ut.cpp
     test/variant.ut.cpp
     test/main.cpp # test driver!...
   PRIVATE_LIBS
