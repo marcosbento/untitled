@@ -1,7 +1,12 @@
 
 *(lib)Untitled* is a set of basic, and mostly naive, utilities:
 
-- Variant
+- Expected
+- Variant 
+
+*Hahahah*, what were you expecting? This is an experimentation sandbox!
+
+It's known to be incomplet and incorrekt, and it has lots of unfinished features...
 
 License
 =======
