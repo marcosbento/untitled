@@ -21,6 +21,7 @@ struct make_recursive_union {
 };
 
 BOOST_AUTO_TEST_SUITE(t_untitled)
+BOOST_AUTO_TEST_SUITE(variant)
 
 BOOST_AUTO_TEST_CASE(can_get_index_of_parameter_in_pack) {
   static_assert(0 == untitled::detail::in_pack_index<int, int, double, char>::value);
@@ -120,4 +121,5 @@ BOOST_AUTO_TEST_CASE(can_visit_variant) {
   untitled::visit(visitor, vi);
 }
 
+BOOST_AUTO_TEST_SUITE_END()
 BOOST_AUTO_TEST_SUITE_END()
