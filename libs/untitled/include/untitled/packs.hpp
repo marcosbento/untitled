@@ -6,6 +6,9 @@
 // See https://github.com/marcosbento/untitled
 //
 
+#ifndef UNTITLED_PACKS_HPP
+#define UNTITLED_PACKS_HPP
+
 #include <cstddef>
 
 namespace untitled {
@@ -67,3 +70,5 @@ constexpr size_t in_pack_size_v = in_pack_size<Types...>::size;
 } // namespace detail
 
 } // namespace untitled
+
+#endif

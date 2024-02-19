@@ -6,12 +6,14 @@
 // See https://github.com/marcosbento/untitled
 //
 
-namespace untitled
-{
+#ifndef UNTITLED_ARRAY_HPP
+#define UNTITLED_ARRAY_HPP
 
-template<typename T>
-class array
-{
-};
+namespace untitled {
 
-}  // namespace untitled
+template <typename T>
+class array {};
+
+} // namespace untitled
+
+#endif

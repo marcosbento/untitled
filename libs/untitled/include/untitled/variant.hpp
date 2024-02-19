@@ -6,6 +6,9 @@
 // See https://github.com/marcosbento/untitled
 //
 
+#ifndef UNTITLED_VARIANT_HPP
+#define UNTITLED_VARIANT_HPP
+
 #include <concepts>
 #include <cstddef>
 #include <functional>
@@ -148,3 +151,5 @@ void visit(Visitor&& visitor, Variant&& variant) {
 }
 
 } // namespace untitled
+
+#endif
