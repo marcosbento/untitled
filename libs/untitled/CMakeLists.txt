@@ -14,6 +14,7 @@ add_untitled_library(
     include/untitled/array.hpp
     include/untitled/expected.hpp
     include/untitled/packs.hpp
+    include/untitled/thread_pool.hpp
     include/untitled/variant.hpp
   SOURCES
     src/array.cpp
@@ -26,6 +27,7 @@ add_untitled_utest(
   SOURCES
     test/array.ut.cpp
     test/expected.ut.cpp
+    test/thread_pool.ut.cpp
     test/variant.ut.cpp
     test/main.cpp # test driver!...
   PRIVATE_LIBS
